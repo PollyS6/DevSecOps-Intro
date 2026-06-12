@@ -54,3 +54,28 @@ For each top-5 risk, name the STRIDE letter(s) it primarily violates:
 
 ### Trust boundary observation
 There is an arrow between Reverse Proxy and Juice shop application. This arrow is attractive for an attacker since it crosses into application zone. It also is unencrypted and lacks authentification. The application itself is quite vulnerable (since RAA is 70) therefore it would be easy for an attacker to exploit it.
+
+## Task 2: Secure Variant & Diff
+
+### Risk count comparison
+| Severity | Baseline | Secure | Δ |
+|----------|---------:|-------:|--:|
+| Critical | 0 | 0 | 0 |
+| High | 0 | 0 | 0 |
+| Elevated | 4 | 2 | 2 |
+| Medium | 14 | 13 | 1 |
+| Low | 5 | 5 | 0 |
+| **Total** | 23 | 20 | 3 |
+
+### Which rules are GONE in the secure variant?
+List 3 rule IDs that fired in baseline but not in secure-variant:
+1. missing authentification — fixed by adding authentification on app communication link
+2. unencrypted communication (proxy and app) - fixed by adding encryption (tls)
+3. unencrypted communication (browser and app) - fixed by changing http to https
+
+### Which rules are STILL THERE in the secure variant?
+1. cross site scripting. - app has XSS vulnerabilities, there is still no explicit control.
+2. unnecessary data transfer - i did not change the asset for that. i simply do not know how i can fix that in config.
+
+### Honesty check
+Total dropped only about 13%. it was a result of a few changes, i could not change more with confidence.
