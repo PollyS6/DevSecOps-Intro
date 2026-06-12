@@ -72,3 +72,9 @@ Which of these are MISSING? (cross-reference Lecture 1 OWASP Top 10:2025 — A06
 - Sections included: Goal / Changes / Testing / Artifacts & Screenshots
 - Checklist items: Title is clear (feat(labN): <topic> style), No secrets/large temp files committed, Submission file at submissions/labN.md exists
 - Auto-fill verified: [ ] No - template is not on branch "main", so no auto-fill. Verified manually
+
+## GitHub Community
+
+Starring repositories matters since it shows that the work done is appreciated, and also helps others discover interesting projects.
+
+Following developers helps in projects and professional growth because you see their activity, you can build a network and reach out for collaboration.
