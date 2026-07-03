@@ -84,8 +84,8 @@ If cosign signed the tag, the tampered image would pass verification. Because, t
           {
             "license": {
               "id": "MIT"
-
 ```
+
 - Component count matches Lab 4 source: yes
 - diff between Lab 4 SBOM and the extracted-from-attestation SBOM: `` (empty diff = success)
 
